@@ -22,7 +22,7 @@ namespace Labb_3
                 Console.WriteLine("2.Get Students in Class");
                 Console.WriteLine("3.Add Personal");
                 Console.WriteLine("4.Exit");
-                Console.WriteLine("Choice:");
+                Console.Write("Choice:");
 
 
                 string? choice = Console.ReadLine();
@@ -106,7 +106,7 @@ namespace Labb_3
                 }
 
                 Console.WriteLine();
-                Console.WriteLine("Choose ClassID:");
+                Console.Write("Choose ClassID:");
                 if (int.TryParse(Console.ReadLine(), out int Class))
                 {
                     var student = context.Students
@@ -115,7 +115,8 @@ namespace Labb_3
                                         .ToList();
                     if (student.Any())
                     {
-                        Console.WriteLine($"Students in Class");
+                        Console.Clear();
+                        Console.WriteLine($"Students in Class {Class}");
 
                         foreach (var s in student)
                         {
@@ -133,6 +134,7 @@ namespace Labb_3
                     Console.Clear();
                 }
 
+                Console.ReadKey();
                 Console.Clear();
             }
 
