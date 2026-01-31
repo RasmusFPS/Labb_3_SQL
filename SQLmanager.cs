@@ -37,6 +37,8 @@ namespace Labb_3
                     case "3":
                         Addstaff();
                         break;
+                    case "4":
+                        return;
                     default:
                         Console.WriteLine("INVALID");
                         break;
