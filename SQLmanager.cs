@@ -59,21 +59,21 @@ namespace Labb_3
                 Console.WriteLine("Do you wish to sort 1:(A-Ö) or 2:(Ö-A)");
                 string sortOrder = Console.ReadLine();
 
-                var query = context.Students.AsQueryable();
+                var query = context.Students.ToList();
 
                 if (sortName == "1")
                 {
                     if (sortOrder == "2")
-                        query = query.OrderByDescending(s => s.FirstName);
+                        query = query.OrderByDescending(s => s.FirstName).ToList();
                     else
-                        query = query.OrderBy(s => s.FirstName);
+                        query = query.OrderBy(s => s.FirstName).ToList();
                 }
                 else if (sortName == "2")
                 {
                     if (sortOrder == "2")
-                        query = query.OrderByDescending(s => s.LastName);
+                        query = query.OrderByDescending(s => s.LastName).ToList();
                     else
-                        query = query.OrderBy(s => s.LastName);
+                        query = query.OrderBy(s => s.LastName).ToList();
                 }
                 else
                 {
