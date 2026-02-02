@@ -10,8 +10,7 @@ namespace Labb_3
     {
         static void Main(string[] args)
         {
-            SQLmanager console = new SQLmanager();
-            console.run();
+            UI.Run();
         }
 
 
