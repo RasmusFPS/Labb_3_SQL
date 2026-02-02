@@ -73,7 +73,7 @@ namespace Labb_3
             var classes = db.GetAllClasses();
             foreach (var c in classes)
             {
-                Console.WriteLine($"ClassID {c.ClassId} {c.ClassName}");
+                Console.WriteLine($"ClassID {c.ClassId} || {c.ClassName}");
             }
 
             Console.WriteLine();
