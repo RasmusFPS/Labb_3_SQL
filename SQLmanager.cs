@@ -31,7 +31,6 @@ namespace Labb_3
                 else
                 {
                     invalid = true;
-                    // Default sort as per original logic
                     query = query.OrderBy(s => s.LastName).ToList();
                 }
                 return query;

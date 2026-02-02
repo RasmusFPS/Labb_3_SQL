@@ -124,6 +124,8 @@ namespace Labb_3
             db.AddStaffToDb(Fname, Lname, role);
 
             Console.WriteLine("Staff Added to the DB");
+            Console.WriteLine("Press AnyKey to continue...");
+            Console.ReadKey();
             Console.Clear();
         }
     }
